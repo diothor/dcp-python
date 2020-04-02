@@ -2,6 +2,9 @@ from operator import itemgetter
 
 
 def heap_sort(arr: list):
+    if type(arr) != list:
+        raise ValueError('Sorting takes only lists')
+
     __build_heap(arr)
     for i in range(len(arr) - 1, 0, -1):
         arr[0], arr[i] = arr[i], arr[0]

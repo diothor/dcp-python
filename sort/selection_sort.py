@@ -1,4 +1,7 @@
-def sort(arr):
+def selection_sort(arr):
+    if type(arr) != list:
+        raise ValueError('Sorting takes only lists')
+
     for outer in range(len(arr)):
         min_index = outer
         for inner in range(outer + 1, len(arr)):
