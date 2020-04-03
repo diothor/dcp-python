@@ -15,7 +15,7 @@ def step_words(word, dictionary):
     return steps
 
 
-en_dict = load_dict('data/engmix.txt')
+en_dict = load_dict('data/en_words.txt')
 similar = step_words('apple', en_dict)
 print(f'{len(similar)} found: {similar}')
-assert 'appeal' in similar
+assert similar == sorted(map(str.lower, ['APPEAL', 'CAPPLE', 'PALPED', 'LAPPED', 'DAPPLE', 'ALEPPO', 'LAPPER', 'RAPPEL', 'LAPPET', 'PAPULE', 'UPLEAP']))
