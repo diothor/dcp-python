@@ -8,6 +8,6 @@ def timeit(foo: callable) -> callable:
         start = time.perf_counter()
         outcome = foo(*args, **kargs)
         took = time.perf_counter() - start
-        print(foo.__name__, f'took {took:.4f} sec')
+        print(f'\n{foo.__name__} took {took:.3f} sec\n')
         return outcome
     return wrapper_stopwatch
