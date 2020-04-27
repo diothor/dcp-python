@@ -1,21 +1,24 @@
-from itertools import zip_longest
-
 types = {'R', 'G', 'B'}
 
 
-def merge_quxes(quxes: list) -> list:
-    merged = []
-    for a, b in zip_longest(quxes[::2], quxes[1::2]):
-        if b is None:
-            merged += a
-        elif a == b:
-            merged += a, b
-        else:
-            merged += types - {a, b}
+def merge_quxes(quxes: list) -> int:
+    size = len(quxes)
+    colors = {k: 0 for k in 'RGB'}
+    for q in quxes:
+        colors[q] += 1
 
-    return merged if merged == quxes else merge_quxes(merged)
+    if max(colors.values()) == size:
+        return size
+
+    parity = [c % 2 for c in colors.values()]
+    if len(set(parity)) == 1:
+        return 2
+    else:
+        return 1
 
 
-assert merge_quxes(['G']) == ['G']
-assert merge_quxes(['B', 'B']) == ['B', 'B']
-assert merge_quxes(['R', 'G', 'B', 'G', 'B']) == ['R']
+assert merge_quxes(['G']) == 1
+assert merge_quxes(['B', 'B', 'B']) == 3
+assert merge_quxes(['R', 'G', 'B', 'G', 'B']) == 1
+assert merge_quxes(['R', 'R', 'R', 'B', 'B', 'B', 'G', 'G', 'G']) == 2
+assert merge_quxes(['R', 'G', 'R', 'G', 'B', 'B']) == 2
