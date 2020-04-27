@@ -2,9 +2,10 @@ import pytest
 from random import shuffle
 from heap_sort import heap_sort
 from selection_sort import selection_sort
+from merge_sort import merge_sort
 
 
-@pytest.fixture(params=[heap_sort, selection_sort])
+@pytest.fixture(params=[merge_sort, heap_sort, selection_sort])
 def sort_alg(request):
     return request.param
 
