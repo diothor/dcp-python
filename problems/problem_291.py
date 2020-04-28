@@ -6,8 +6,7 @@ def evacuate(people: list, boat_size: int) -> int:
             raise ValueError(f'Person can not fit in a boat. Weight: {weight} Boat size: {boat_size}')
         another = None
         for i in range(1, len(people)):
-            print(people[0], people[i])
-            new_weight = weight + people[i]
+            new_weight = people[0] + people[i]
             if weight < new_weight <= boat_size:
                 weight = new_weight
                 another = i
