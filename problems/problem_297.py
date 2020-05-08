@@ -31,3 +31,12 @@ test_preferences = {
     4: [5, 8]
 }
 assert lazy_bartender_drinks(test_preferences) == 2
+
+test_preferences_2 = {
+    0: [3, 7, 5, 2, 9],
+    1: [5],
+    2: [2, 3],
+    3: [4],
+    4: [3, 4, 5, 7]
+}
+assert lazy_bartender_drinks(test_preferences_2) == 3
