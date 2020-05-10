@@ -9,18 +9,18 @@ def find_min_subset_of_drinks(preferences: dict, drinks_for_all: set) -> set:
         return drinks_for_all
 
     current_drinks = set(preferences.popitem()[1])
-    options = []
     if current_drinks & drinks_for_all:
         # if a person has in his preferences drink, which is already in our set, just simply go for another person
-        options.append(find_min_subset_of_drinks(preferences, drinks_for_all))
+        return find_min_subset_of_drinks(preferences, drinks_for_all)
     else:
         # if a person does not have any drink in our set, create all possible versions of drinks_for_all set and go for another person
+        options = []
         for drink in current_drinks:
             drinks_for_all_copy = drinks_for_all.copy()
             drinks_for_all_copy.add(drink)
             options.append(find_min_subset_of_drinks(preferences.copy(), drinks_for_all_copy))
-    # from all options get first set with the lowest number of drinks
-    return min(options, key=lambda d: len(d))
+        # from all options get first set with the lowest number of drinks
+        return min(options, key=lambda d: len(d))
 
 
 test_preferences = {
@@ -40,3 +40,11 @@ test_preferences_2 = {
     4: [3, 4, 5, 7]
 }
 assert lazy_bartender_drinks(test_preferences_2) == 3
+
+test_preferences_2 = {
+    1: [1, 2, 3],
+    2: [1, 2, 3],
+    3: [1, 2, 3],
+    4: [1, 2, 3]
+}
+assert lazy_bartender_drinks(test_preferences_2) == 1
