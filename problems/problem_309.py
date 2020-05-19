@@ -1,38 +1,40 @@
-from itertools import zip_longest
-
-
+# O(n+k)
 def all_together_cost(seats: list) -> int:
     # n - number of seats equal to len(seats)
     n = len(seats)
 
-    ones_out = {i for i in range(n) if seats[i] == 1}  # O(n)
+    # O(n)
+    ppl = [i for i, v in enumerate(seats) if v]
+
     # k - number of people equal to seats.count(1)
-    k = len(ones_out)
+    k = len(ppl)
+    if k == 0:
+        return -1
 
-    zeros_in = set()
-    for i in range(k):  # O(k)
-        if seats[i] == 1:
-            ones_out.remove(i)
-        else:
-            zeros_in.add(i)
+    middle_person = ppl[k // 2]
+    hops = 0
 
-    # O(n-k) * O(k) ~= O(n*k)
-    hops = float('inf')
-    for i in range(k, n):  # O(n-k)
-        hops = min(hops, sum([abs(a - b) for a, b in zip_longest(zeros_in, ones_out, fillvalue=0)]))  # O(k)
+    # O(k/2)
+    seat_on_left = middle_person - 1
+    for i in range(k // 2 - 1, -1, -1):
+        person_on_left = ppl[i]
+        hops += seat_on_left - person_on_left
+        seat_on_left -= 1
 
-        if seats[i-k] == 0:
-            zeros_in.remove(i-k)  # O(1)
-        else:
-            ones_out.add(i-k)  # O(1)
+    # O(k/2)
+    seat_on_right = middle_person + 1
+    for r in range(k // 2 + 1, k):
+        person_on_right = ppl[r]
+        hops += person_on_right - seat_on_right
+        seat_on_right += 1
 
-        if seats[i] == 0:
-            zeros_in.add(i)  # O(1)
-        else:
-            ones_out.remove(i)  # O(1)
     return hops
 
 
+assert all_together_cost([0]) == -1
+assert all_together_cost([1]) == 0
+assert all_together_cost([1, 1, 0, 1, 1, 1]) == 2
 assert all_together_cost([1, 0, 1, 0, 1]) == 2
 assert all_together_cost([1, 0, 1, 0, 1, 1]) == 3
+assert all_together_cost([1, 1, 0, 1, 0, 1]) == 3
 assert all_together_cost([0, 1, 1, 0, 1, 0, 0, 0, 1]) == 5
