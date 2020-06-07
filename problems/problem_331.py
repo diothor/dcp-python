@@ -1,14 +1,6 @@
 def flip_count(string: str) -> int:
-    flips = 0
-    y_count = 0
-    for letter in string:
-        if letter == 'y':
-            y_count += 1
-        elif letter == 'x' and y_count > 0:
-            flips += y_count
-            y_count = 0
-    else:
-        return flips
+    last_x = string.rfind('x')
+    return 0 if last_x < 0 else string.count('y', 0, last_x)
 
 
 assert flip_count('xyxxxyxyy') == 2
@@ -16,3 +8,6 @@ assert flip_count('yyx') == 2
 assert flip_count('xyxxxyxyyx') == 4
 assert flip_count('xyxxxyxyyxxx') == 4
 assert flip_count('yyxxx') == 2
+assert flip_count('yyy') == 0
+assert flip_count('xyy') == 0
+assert flip_count('xxx') == 0
