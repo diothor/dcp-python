@@ -1,6 +1,6 @@
 # Algorithms & Data Structures in Python
 I used this project to learn Python and sharpern my programmic skills. You may find here solution for some algorithmic riddles, 
-implementations of algorithms (e.g. sorting, searching in grapgh) or data structures examples (e.g. heap, stack).
+implementations of algorithms (e.g. sorting, searching in graph) or data structures examples (e.g. heap, stack).
 
 ## [Daily Coding Problems](problems/)
 Here you will find my solutions for some of algorithmic riddles from [Daily Coding Problem](https://www.dailycodingproblem.com/).
