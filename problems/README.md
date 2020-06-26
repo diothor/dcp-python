@@ -10,7 +10,7 @@ Write a program to determine the lexicographically smallest string that can be c
 
 For example, suppose we are given the string `daily` and `k = 1`. The best we can create in this case is `ailyd`.
 
-### [Problem #346 [Medium]](graph/problem_346.py)
+### [Problem #346 [Medium]](graphs/problem_346.py)
 This problem was asked by Airbnb.
 
 You are given a huge list of airline ticket prices between different cities around the world on a given day. 
@@ -70,3 +70,53 @@ whether it is possible to reach the value 24.
 For example, given the input `[5, 2, 7, 8]`, you should return True, since `(5 * 2 - 7) * 8 = 24`.
 
 Write a function that plays the 24 game.
+
+### [Problem #29 [Easy]](strings/problem_029.py)
+This problem was asked by Amazon.
+
+Run-length encoding is a fast and simple method of encoding strings. The basic idea is to represent repeated successive 
+characters as a single count and character. For example, the string `"AAAABBBCCDAA"` would be encoded as `"4A3B2C1D2A"`.
+
+Implement run-length encoding and decoding. You can assume the string to be encoded have no digits and consists solely
+of alphabetic characters. You can assume the string to be decoded is valid.
+
+### [Problem #23 [Easy]](graphs/problem_023.py)
+This problem was asked by Google.
+
+You are given an M by N matrix consisting of booleans that represents a board. Each True boolean represents a wall. 
+Each False boolean represents a tile you can walk on.
+
+Given this matrix, a start coordinate, and an end coordinate, return the minimum number of steps required to reach 
+the end coordinate from the start. If there is no possible path, then return null. You can move up, left, down, and right. 
+You cannot move through walls. You cannot wrap around the edges of the board.
+
+For example, given the following board:
+```
+[
+    [f, f, f, f],
+    [t, t, f, t],
+    [f, f, f, f],
+    [f, f, f, f]
+]
+```
+and `start = (3, 0)` (bottom left) and `end = (0, 0)` (top left), the minimum number of steps required to reach the end 
+is `7`, since we would need to go through `(1, 2)` because there is a wall everywhere else on the second row.
+
+### [Problem #21 [Easy]](problem_021.py)
+This problem was asked by Snapchat.
+
+Given an array of time intervals (start, end) for classroom lectures (possibly overlapping), 
+find the minimum number of rooms required.
+
+For example, given `[(30, 75), (0, 50), (60, 150)]`, you should return `2`.
+
+### [Problem #20 [Easy]](data_structures/problem_020.py)
+This problem was asked by Google.
+
+Given two singly linked lists that intersect at some point, find the intersecting node. The lists are non-cyclical.
+
+For example, given `A = 3 -> 7 -> 8 -> 10` and `B = 99 -> 1 -> 8 -> 10`, return the node with value `8`.
+
+In this example, assume nodes with the same value are the exact same node objects.
+
+Do this in `O(M + N)` time (where M and N are the lengths of the lists) and constant space.
