@@ -71,6 +71,65 @@ For example, given the input `[5, 2, 7, 8]`, you should return True, since `(5 *
 
 Write a function that plays the 24 game.
 
+### [Problem #269 [Easy]](problem_269.py)
+This problem was asked by Microsoft.
+
+You are given an string representing the initial conditions of some dominoes. Each element can take one of three values:
+
+    L, meaning the domino has just been pushed to the left,
+    R, meaning the domino has just been pushed to the right, or
+    ., meaning the domino is standing still.
+
+Determine the orientation of each tile when the dominoes stop falling. Note that if a domino receives a force from 
+the left and right side simultaneously, it will remain upright.
+
+For example, given the string `.L.R....L`, you should return `LL.RRRLLL`.
+
+Given the string `..R...L.L`, you should return `..RR.LLLL`.
+
+### [Problem #266 [Easy]](strings/problem_266.py)
+This problem was asked by Pivotal.
+
+A step word is formed by taking a given word, adding a letter, and anagramming the result. For example, starting with 
+the word `"APPLE"`, you can add an `"A"` and anagram to get `"APPEAL"`.
+
+Given a dictionary of words and an input word, create a function that returns all valid step words.
+
+### [Problem #265 [Easy]](numbers/problem_265.py)
+This problem was asked by Atlassian.
+
+MegaCorp wants to give bonuses to its employees based on how many lines of codes they have written. They would like to 
+give the smallest positive amount to each worker consistent with the constraint that if a developer has written more 
+lines of code than their neighbor, they should receive more money.
+
+Given an array representing a line of seats of employees at MegaCorp, determine how much each one should get paid.
+
+For example, given `[10, 40, 200, 1000, 60, 30]`, you should return `[1, 2, 3, 4, 2, 1]`.
+
+### [Problem #258 [Easy]](graphs/problem_258.py)
+This problem was asked by Morgan Stanley.
+
+In Ancient Greece, it was common to write text with the first line going left to right, the second line going right to left, 
+and continuing to go back and forth. This style was called "boustrophedon".
+
+Given a binary tree, write an algorithm to print the nodes in boustrophedon order.
+
+For example, given the following tree:
+````
+       1
+    /     \
+  2         3
+ / \       / \
+4   5     6   7
+````
+You should return `[1, 3, 2, 4, 5, 6, 7]`.
+
+### [Problem #257 [Easy]](problem_257.py)
+This problem was asked by WhatsApp.
+
+Given an array of integers out of order, determine the bounds of the smallest window that must be sorted in order for 
+the entire array to be sorted. For example, given `[3, 7, 5, 6, 9]`, you should return `(1, 3)`.
+
 ### [Problem #255 [Easy]](graphs/problem_255)
 This problem was asked by Microsoft.
 
