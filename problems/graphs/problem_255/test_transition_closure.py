@@ -1,4 +1,4 @@
-from transitive_closure import transitive_closure
+from graphs.problem_255.transitive_closure import transitive_closure
 
 
 def test_matrix_size():

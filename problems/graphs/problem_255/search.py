@@ -27,11 +27,11 @@ def __dfs_recursive(graph, vertice, visited, path):
     return path
 
 
-graph = [
+test_graph = [
     [0, 1, 2],
     [1, 2],
     [0, 2, 3],
     [3]
 ]
-print(dfs(graph, 2))
-print(dfs_recursive(graph, 2))
+print(dfs(test_graph, 2))
+print(dfs_recursive(test_graph, 2))
