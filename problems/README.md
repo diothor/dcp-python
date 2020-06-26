@@ -71,6 +71,47 @@ For example, given the input `[5, 2, 7, 8]`, you should return True, since `(5 *
 
 Write a function that plays the 24 game.
 
+### [Problem #255 [Easy]](graphs/problem_255)
+This problem was asked by Microsoft.
+
+The transitive closure of a graph is a measure of which vertices are reachable from other vertices. It can be represented 
+as a matrix M, where `M[i][j] == 1` if there is a path between vertices `i` and `j`, and otherwise `0`.
+
+For example, suppose we are given the following graph in adjacency list form:
+````
+graph = [
+    [0, 1, 3],
+    [1, 2],
+    [2],
+    [3]
+]
+````
+The transitive closure of this graph would be:
+````
+[1, 1, 1, 1]
+[0, 1, 1, 0]
+[0, 0, 1, 0]
+[0, 0, 0, 1]
+````
+Given a graph, find its transitive closure.
+
+### [Problem #252 [Easy]](numbers/problem_252.py)
+This problem was asked by Palantir.
+
+The ancient Egyptians used to express fractions as a sum of several terms where each numerator is one. For example, 
+`4 / 13` can be represented as `1 / 4 + 1 / 18 + 1 / 468`.
+
+Create an algorithm to turn an ordinary fraction `a / b`, where `a < b`, into an Egyptian fraction.
+
+### [Problem #224 [Easy]](numbers/problem_224.py)
+This problem was asked by Amazon.
+
+Given a sorted array, find the smallest positive integer that is not the sum of a subset of the array.
+
+For example, for the input `[1, 2, 3, 10]`, you should return `7`.
+
+Do this in `O(N)` time.
+
 ### [Problem #29 [Easy]](strings/problem_029.py)
 This problem was asked by Amazon.
 
