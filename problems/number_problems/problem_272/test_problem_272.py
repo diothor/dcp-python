@@ -1,5 +1,5 @@
 import my_decors
-from problem_272 import throw_dice
+from number_problems.problem_272.problem_272 import throw_dice
 
 
 def test_simple():
