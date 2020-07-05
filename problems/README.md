@@ -54,13 +54,19 @@ the second element of the array, and so on until we reach the end, when we retur
 
 Implement your own version of `reduce`.
 
-### [Problem #338 [Medium]](numbers/problem_338.py)
+### [Problem #339 [Easy]](number_problems/problem_339)
+This problem was asked by Microsoft.
+
+Given an array of numbers and a number `k`, determine if there are three entries in the array which add up to 
+the specified number `k`. For example, given `[20, 303, 3, 4, 25]` and `k = 49`, return true as `20 + 4 + 25 = 49`.
+
+### [Problem #338 [Medium]](number_problems/problem_338.py)
 This problem was asked by Facebook.
 
 Given an integer n, find the next biggest integer with the same number of 1-bits on. For example, given the number 6 
 (`0110` in binary), return 9 (`1001`).
 
-### [Problem #334 [Easy]](numbers/problem_334.py)
+### [Problem #334 [Easy]](number_problems/problem_334.py)
 This problem was asked by Twitter.
 
 The 24 game is played as follows. You are given a list of four integers, each between `1` and `9`, in a fixed order. 
@@ -70,6 +76,35 @@ whether it is possible to reach the value 24.
 For example, given the input `[5, 2, 7, 8]`, you should return True, since `(5 * 2 - 7) * 8 = 24`.
 
 Write a function that plays the 24 game.
+
+### [Problem #272 [Medium]](number_problems/problem_272)
+Write a function, `throw_dice(N, faces, total)`, that determines how many ways it is possible to throw `N` dice with 
+some number of faces each to get a specific total.
+
+For example, `throw_dice(3, 6, 7)` should equal `15`.
+
+### [Problem #270 [Medium]](graphs/problem_270.py)
+This problem was asked by Twitter.
+
+A network consists of nodes labeled `0` to `N`. You are given a list of edges `(a, b, t)`, describing the time `t` 
+it takes for a message to be sent from node `a` to node `b`. Whenever a node receives a message, it immediately passes 
+the message on to a neighboring node, if possible.
+
+Assuming all nodes are connected, determine how long it will take for every node to receive a message that begins at node `0`.
+
+For example, given N = 5, and the following edges:
+````
+edges = [
+    (0, 1, 5),
+    (0, 2, 3),
+    (0, 5, 4),
+    (1, 3, 8),
+    (2, 3, 1),
+    (3, 5, 10),
+    (3, 4, 5)
+]
+````
+You should return `9`, because propagating the message from `0 -> 2 -> 3 -> 4` will take that much time.
 
 ### [Problem #269 [Easy]](problem_269.py)
 This problem was asked by Microsoft.
@@ -95,7 +130,7 @@ the word `"APPLE"`, you can add an `"A"` and anagram to get `"APPEAL"`.
 
 Given a dictionary of words and an input word, create a function that returns all valid step words.
 
-### [Problem #265 [Easy]](numbers/problem_265.py)
+### [Problem #265 [Easy]](number_problems/problem_265.py)
 This problem was asked by Atlassian.
 
 MegaCorp wants to give bonuses to its employees based on how many lines of codes they have written. They would like to 
@@ -154,7 +189,7 @@ The transitive closure of this graph would be:
 ````
 Given a graph, find its transitive closure.
 
-### [Problem #252 [Easy]](numbers/problem_252.py)
+### [Problem #252 [Easy]](number_problems/problem_252.py)
 This problem was asked by Palantir.
 
 The ancient Egyptians used to express fractions as a sum of several terms where each numerator is one. For example, 
@@ -162,7 +197,7 @@ The ancient Egyptians used to express fractions as a sum of several terms where 
 
 Create an algorithm to turn an ordinary fraction `a / b`, where `a < b`, into an Egyptian fraction.
 
-### [Problem #224 [Easy]](numbers/problem_224.py)
+### [Problem #224 [Easy]](number_problems/problem_224.py)
 This problem was asked by Amazon.
 
 Given a sorted array, find the smallest positive integer that is not the sum of a subset of the array.
