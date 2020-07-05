@@ -24,3 +24,7 @@ def test_when_too_few_to_sum():
 
 def test_discontinuous_nums_when_sorted():
     assert three_to_sum([20, 303, 3, 4, 25, 7, 21], 49) is True
+
+
+def test_if_one_number_is_used_once():
+    assert three_to_sum([2, 4, 5], 6) is False
