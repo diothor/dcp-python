@@ -77,6 +77,16 @@ For example, given the input `[5, 2, 7, 8]`, you should return True, since `(5 *
 
 Write a function that plays the 24 game.
 
+### [Problem #332 [Easy]](number_problems/problem_332.py)
+This problem was asked by Jane Street.
+
+Given integers `M` and `N`, write a program that counts how many positive integer pairs `(a, b)` satisfy the following 
+conditions:
+
+* `a + b = M`
+* `a XOR b = N`
+
+
 ### [Problem #272 [Medium]](number_problems/problem_272)
 Write a function, `throw_dice(N, faces, total)`, that determines how many ways it is possible to throw `N` dice with 
 some number of faces each to get a specific total.
