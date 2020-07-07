@@ -1,4 +1,4 @@
-from my_heap import Heap
+from heap.my_heap import Heap
 
 
 def test_building_heap():
