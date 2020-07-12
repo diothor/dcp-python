@@ -1,10 +1,10 @@
 from math import sqrt
 from operator import itemgetter
-from typing import Tuple, Set, List
+from typing import Tuple, Set, List, Dict
 
 
 class Point:
-    def __init__(self, coordinates: (int, int)):
+    def __init__(self, coordinates: Tuple[int, int]):
         self.x, self.y = coordinates
 
     def __repr__(self):
@@ -21,7 +21,7 @@ def __dist(p1: Point, p2: Point) -> float:
 
 
 # O(n^2) where n is number of points to check
-def __closest_pair_naive(points: List[Point], n: int) -> {float: set}:
+def __closest_pair_naive(points: List[Point], n: int) -> Dict[float, Set[Point]]:
     closest_points = set()
     min_dist = float('inf')
     for i in range(n):
@@ -53,7 +53,7 @@ def __border_points(points: List[Point], median: int, border_range: float) -> li
 
 
 # O(nlogn)
-def __closest_pair_border(points: List[Point], border_range: float) -> {float: set}:
+def __closest_pair_border(points: List[Point], border_range: float) -> Dict[float, Set[Point]]:
     points.sort(key=lambda p: p.y)  # O(nlogn)
     border_pair = set()
     dist_border = border_range
@@ -71,7 +71,7 @@ def __closest_pair_border(points: List[Point], border_range: float) -> {float: s
 
 # it returns distance beetween two closest points and the points
 # O(nlogn)
-def __closest_pair_recur(points: List[Point]) -> {float: set}:
+def __closest_pair_recur(points: List[Point]) -> Dict[float, Set[Point]]:
     # conquer - O(1)
     size = len(points)
     if size < 4:
