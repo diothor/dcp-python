@@ -1,38 +1,38 @@
 from typing import Union
+import heapq
+from collections import Counter
 
 
-# n is number of all letters in a word equal to len(w)
-# k is number of unique letters in a word eqial to len({l for l in w})
-# O(n) + O(n) * O(klogk) ~= O(nklogk)
-def rearrange(word: str) -> Union[str, None]:
-    letters = {}
-    for l in word:  # O(n)
-        letters.setdefault(l, 0)
-        letters[l] += 1
+# O(n) + O(n) + O(n*2logn) ~= O(nlogn) where n is number of all characters in `s` and is equal to len(s)
+def the_same_not_adjacent(s: str) -> Union[str, None]:
+    characters = Counter(s)  # O(n)
+    characters = [[-f, ch] for ch, f in characters.items()]  # O(n)
+    heapq.heapify(characters)  # O(n)
 
-    max_key = max(letters, key=letters.get)
-    if letters[max_key] > len(word) - letters[max_key] + 1:
-        return None
-
+    last_letter = [0, '']
     res = ''
-    last = ''
-    # O(n) * O(klogk)
-    while letters:  # O(n)
-        letters_frequency = sorted(letters.items(), key=lambda i: i[1])  # O(klogk)
-        next_letter = letters_frequency[-1][0] if len(letters_frequency) < 2 or last != letters_frequency[-1][0] else letters_frequency[-2][0]
-        res += next_letter
-        last = next_letter
-        letters[next_letter] -= 1
-        if letters[next_letter] < 1:
-            del(letters[next_letter])
+    # O(n*2logn)
+    while characters:  # O(n)
+        next_letter = heapq.heappop(characters)  # O(logn)
+        res += next_letter[1]
+        next_letter[0] += 1
+        if last_letter[0] < 0:
+            heapq.heappush(characters, last_letter)  # O(logn)
+        last_letter = next_letter
     else:
-        return res
+        return res if len(res) == len(s) else None
 
 
-assert rearrange('yyz') == 'yzy'
-assert rearrange('yyy') is None
+assert the_same_not_adjacent('yyz') == 'yzy'
+assert the_same_not_adjacent('yyy') is None
 
-assert rearrange('aaabc') == 'acaba'
-assert rearrange('aaabb') == 'ababa'
-assert rearrange('aaaabc') is None
-assert rearrange('aa') is None
+assert the_same_not_adjacent('aaabc') == 'abaca'
+assert the_same_not_adjacent('aaabb') == 'ababa'
+assert the_same_not_adjacent('aaaabc') is None
+assert the_same_not_adjacent('aa') is None
+
+assert the_same_not_adjacent('zzzzaabb') == 'zazbzabz'
+assert the_same_not_adjacent('') == ''
+
+assert the_same_not_adjacent('abcdef') == 'abcdef'
+assert the_same_not_adjacent('fedcba') == 'abcdef'
