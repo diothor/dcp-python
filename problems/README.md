@@ -1,6 +1,6 @@
 # Daily Coding Problems
 
-### [Problem #366 [Medium]](strings/problem_366.py)
+### [Problem #366 [Medium]](string_problems/problem_366.py)
 This problem was asked by Flexport.
 
 Given a string `s`, rearrange the characters so that any two adjacent characters are not the same. If this is not possible, 
@@ -16,7 +16,7 @@ A strobogrammatic number is a positive number that appears the same after being 
 
 Create a program that finds all strobogrammatic numbers with N digits.
 
-### [Problem #348 [EASY]](strings/problem_348.py)
+### [Problem #348 [EASY]](string_problems/problem_348.py)
 This problem was asked by Zillow.
 
 A ternary search tree is a trie-like data structure where each node may have up to three children. Here is an example 
@@ -39,7 +39,7 @@ The tree is structured according to the following rules:
 For instance, since `code` is the first word inserted in the tree, and `cob` lexicographically precedes `cod`, `cob` is 
 represented as a left child extending from `cod`.
 
-### [Problem #347 [EASY]](strings/problem_347.py)
+### [Problem #347 [EASY]](string_problems/problem_347.py)
 This problem was asked by Yahoo.
 
 You are given a string of length `N` and a parameter `k`. The string can be manipulated by taking one of the first `k` 
@@ -131,6 +131,22 @@ conditions:
 * `a + b = M`
 * `a XOR b = N`
 
+### [Problem #331 [Medium]](string_problems/problem_331.py)
+This problem was asked by LinkedIn.
+
+You are given a string consisting of the letters `x` and `y`, such as `xyxxxyxyy`. In addition, you have an operation 
+called `flip`, which changes a single `x` to `y` or vice versa.
+
+Determine how many times you would need to apply this operation to ensure that all `x`'s come before all `y`'s. 
+In the preceding example, it suffices to flip the second and sixth characters, so you should return `2`.
+
+### [Problem #320 [Medium]](string_problems/problem_320.py)
+This problem was asked by Amazon.
+
+Given a string, find the length of the smallest window that contains every distinct character. Characters may appear 
+more than once in the window.
+
+For example, given "jiujitsu", you should return `5`, corresponding to the final five letters.
 
 ### [Problem #272 [Medium]](number_problems/problem_272)
 Write a function, `throw_dice(N, faces, total)`, that determines how many ways it is possible to throw `N` dice with 
@@ -177,7 +193,7 @@ For example, given the string `.L.R....L`, you should return `LL.RRRLLL`.
 
 Given the string `..R...L.L`, you should return `..RR.LLLL`.
 
-### [Problem #266 [Easy]](strings/problem_266.py)
+### [Problem #266 [Easy]](string_problems/problem_266.py)
 This problem was asked by Pivotal.
 
 A step word is formed by taking a given word, adding a letter, and anagramming the result. For example, starting with 
@@ -261,7 +277,7 @@ For example, for the input `[1, 2, 3, 10]`, you should return `7`.
 
 Do this in `O(N)` time.
 
-### [Problem #29 [Easy]](strings/problem_029.py)
+### [Problem #29 [Easy]](string_problems/problem_029.py)
 This problem was asked by Amazon.
 
 Run-length encoding is a fast and simple method of encoding strings. The basic idea is to represent repeated successive 
