@@ -140,6 +140,14 @@ called `flip`, which changes a single `x` to `y` or vice versa.
 Determine how many times you would need to apply this operation to ensure that all `x`'s come before all `y`'s. 
 In the preceding example, it suffices to flip the second and sixth characters, so you should return `2`.
 
+### [Problem #320 [Medium]](string_problems/problem_320.py)
+This problem was asked by Amazon.
+
+Given a string, find the length of the smallest window that contains every distinct character. Characters may appear 
+more than once in the window.
+
+For example, given "jiujitsu", you should return `5`, corresponding to the final five letters.
+
 ### [Problem #272 [Medium]](number_problems/problem_272)
 Write a function, `throw_dice(N, faces, total)`, that determines how many ways it is possible to throw `N` dice with 
 some number of faces each to get a specific total.
