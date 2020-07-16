@@ -151,6 +151,18 @@ called `flip`, which changes a single `x` to `y` or vice versa.
 Determine how many times you would need to apply this operation to ensure that all `x`'s come before all `y`'s. 
 In the preceding example, it suffices to flip the second and sixth characters, so you should return `2`.
 
+### [Problem #324 [Easy]](number_problems/problem_324.py)
+This problem was asked by Amazon.
+
+Consider the following scenario: there are `N` mice and `N` holes placed at integer points along a line. Given this, 
+find a method that maps mice to holes such that the largest number of steps any mouse takes is minimized.
+
+Each move consists of moving one mouse one unit to the left or right, and only one mouse can fit inside each hole.
+
+For example, suppose the mice are positioned at `[1, 4, 9, 15]`, and the holes are located at `[10, -5, 0, 16]`. 
+In this case, the best pairing would require us to send the mouse at `1` to the hole at `-5`, so our function should 
+return `6`.
+
 ### [Problem #320 [Medium]](string_problems/problem_320.py)
 This problem was asked by Amazon.
 
