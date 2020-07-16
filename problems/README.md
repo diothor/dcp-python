@@ -16,6 +16,17 @@ A strobogrammatic number is a positive number that appears the same after being 
 
 Create a program that finds all strobogrammatic numbers with N digits.
 
+### [Problem #359 [Easy]](string_problems/problem_359.py)
+This problem was asked by Slack.
+
+You are given a string formed by concatenating several words corresponding to the integers zero through nine and then 
+anagramming.
+
+For example, the input could be `'niesevehrtfeev'`, which is an anagram of `'threefiveseven'`. Note that there can be 
+multiple instances of each integer.
+
+Given this string, return the original integers in sorted order. In the example above, this would be `357`.
+
 ### [Problem #348 [EASY]](string_problems/problem_348.py)
 This problem was asked by Zillow.
 
