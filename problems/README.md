@@ -60,7 +60,7 @@ Write a program to determine the lexicographically smallest string that can be c
 
 For example, suppose we are given the string `daily` and `k = 1`. The best we can create in this case is `ailyd`.
 
-### [Problem #346 [Medium]](graphs/problem_346.py)
+### [Problem #346 [Medium]](graph_problems/problem_346.py)
 This problem was asked by Airbnb.
 
 You are given a huge list of airline ticket prices between different cities around the world on a given day. 
@@ -177,7 +177,7 @@ some number of faces each to get a specific total.
 
 For example, `throw_dice(3, 6, 7)` should equal `15`.
 
-### [Problem #270 [Medium]](graphs/problem_270.py)
+### [Problem #270 [Medium]](graph_problems/problem_270.py)
 This problem was asked by Twitter.
 
 A network consists of nodes labeled `0` to `N`. You are given a list of edges `(a, b, t)`, describing the time `t` 
@@ -235,7 +235,7 @@ Given an array representing a line of seats of employees at MegaCorp, determine 
 
 For example, given `[10, 40, 200, 1000, 60, 30]`, you should return `[1, 2, 3, 4, 2, 1]`.
 
-### [Problem #258 [Easy]](graphs/problem_258.py)
+### [Problem #258 [Easy]](graph_problems/problem_258.py)
 This problem was asked by Morgan Stanley.
 
 In Ancient Greece, it was common to write text with the first line going left to right, the second line going right to left, 
@@ -259,7 +259,7 @@ This problem was asked by WhatsApp.
 Given an array of integers out of order, determine the bounds of the smallest window that must be sorted in order for 
 the entire array to be sorted. For example, given `[3, 7, 5, 6, 9]`, you should return `(1, 3)`.
 
-### [Problem #255 [Easy]](graphs/problem_255)
+### [Problem #255 [Easy]](graph_problems/problem_255)
 This problem was asked by Microsoft.
 
 The transitive closure of a graph is a measure of which vertices are reachable from other vertices. It can be represented 
@@ -309,7 +309,7 @@ characters as a single count and character. For example, the string `"AAAABBBCCD
 Implement run-length encoding and decoding. You can assume the string to be encoded have no digits and consists solely
 of alphabetic characters. You can assume the string to be decoded is valid.
 
-### [Problem #23 [Easy]](graphs/problem_023.py)
+### [Problem #23 [Easy]](graph_problems/problem_023.py)
 This problem was asked by Google.
 
 You are given an M by N matrix consisting of booleans that represents a board. Each True boolean represents a wall. 

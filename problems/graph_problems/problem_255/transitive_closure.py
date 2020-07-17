@@ -1,4 +1,4 @@
-import graphs.problem_255.search as search
+import graph_problems.problem_255.search as search
 
 
 def transitive_closure(graph: list) -> list:
