@@ -300,6 +300,24 @@ For example, for the input `[1, 2, 3, 10]`, you should return `7`.
 
 Do this in `O(N)` time.
 
+### [Problem #050 [Easy]](graph_problems/problem_050.py)
+This problem was asked by Microsoft.
+
+Suppose an arithmetic expression is given as a binary tree. Each leaf is an integer and each internal node is one of 
+`+`, `−`, `∗`, or `/`.
+
+Given the root to such a tree, write a function to evaluate it.
+
+For example, given the following tree:
+````
+    *
+   / \
+  +    +
+ / \  / \
+3  2  4  5
+````
+You should return `45`, as it is `(3 + 2) * (4 + 5)`.
+
 ### [Problem #29 [Easy]](string_problems/problem_029.py)
 This problem was asked by Amazon.
 
