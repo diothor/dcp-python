@@ -1,6 +1,6 @@
 # Daily Coding Problems
 
-### [Problem #373 [Easy]](number_problems/problem_373.py)
+### [Problem #373 [Hard]](number_problems/problem_373.py)
 This problem was asked by Facebook.
 
 Given a list of integers L, find the maximum length of a sequence of consecutive numbers that can be formed using 
