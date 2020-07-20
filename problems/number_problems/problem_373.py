@@ -1,14 +1,13 @@
-# O(nlogn)
+# O(n)
 def consecutive_seq_len(*args: int) -> int:
-    nums_sorted = sorted(args)  # O(nlogn)
-    seq_start = 0
     seq_max_len = 0
-    for num_index in range(1, len(nums_sorted) + 1):  # O(n)
-        prev = nums_sorted[num_index - 1]
-        current = nums_sorted[num_index] if num_index < len(nums_sorted) else float('inf')
-        if prev + 1 != current:
-            seq_max_len = max(seq_max_len, num_index - seq_start)
-            seq_start = num_index
+    num_hashes = {num for num in args}  # O(n)
+    for num in num_hashes:  # 2*O(n)
+        if num - 1 not in num_hashes:  # O(1)
+            new_seq = 1
+            while num + new_seq in num_hashes:  # O(1)
+                new_seq += 1
+            seq_max_len = max(seq_max_len, new_seq)  # O(1)
     else:
         return seq_max_len
 
