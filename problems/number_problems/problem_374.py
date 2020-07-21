@@ -10,4 +10,7 @@ def magic_index(*sorted_nums: int) -> Union[int, None]:
         return None
 
 
+assert magic_index() is None
+assert magic_index(4, 6) is None
 assert magic_index(-5, -3, 2, 3) == 2
+assert magic_index(-5, -3, 0, 3, 4) == 3
