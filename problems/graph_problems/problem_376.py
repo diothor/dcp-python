@@ -17,3 +17,4 @@ def closes_coin(position: Tuple[int, int], coins: List[Tuple[int, ...]]) -> Unio
 
 
 assert closes_coin((0, 2), [(0, 4), (1, 0), (2, 0), (3, 2)]) == (0, 4)
+assert closes_coin((0, 2), []) is None
