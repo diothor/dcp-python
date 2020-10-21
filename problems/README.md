@@ -8,7 +8,15 @@ rooms required.
 
 For example, given `[(30, 75), (0, 50), (60, 150)]`, you should return `2`.
 
+### [Problem #403 [Easy]](number_problems/problem_403.py)
+This problem was asked by Two Sigma.
+
+Using a function `rand5()` that returns an integer from 1 to 5 (inclusive) with uniform probability, implement a function 
+`rand7()` that returns an integer from 1 to 7 (inclusive).
+
 ### [Problem #401 [Easy]](others/problem_401.py)
+This problem was asked by Twitter.
+
 A permutation can be specified by an array `P`, where `P[i]` represents the location of the element at `i` in 
 the permutation. For example, `[2, 1, 0]` represents the permutation where elements at the index `0` and `2` are swapped.
 
