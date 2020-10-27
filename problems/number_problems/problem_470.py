@@ -19,12 +19,12 @@ def closest_larger(arr: list, i: int) -> Union[int, None]:
 
 
 # test from the task
-# assert closest_larger([4, 1, 3, 5, 6], 0) == 3
+assert closest_larger([4, 1, 3, 5, 6], 0) == 3
 
 # tests from https://stackoverflow.com/questions/25812382/how-to-find-the-nearest-larger-element-to-another-element-in-an-array
-# assert closest_larger([1, 2, 6, 5, 10], 0) == 1
-# assert closest_larger([1, 2, 6, 5, 10], 1) == 2
-# assert closest_larger([1, 2, 6, 5, 10], 2) == 4
+assert closest_larger([1, 2, 6, 5, 10], 0) == 1
+assert closest_larger([1, 2, 6, 5, 10], 1) == 2
+assert closest_larger([1, 2, 6, 5, 10], 2) == 4
 assert closest_larger([1, 2, 6, 5, 10], 3) in (2, 4)
 assert closest_larger([1, 2, 6, 5, 10], 4) is None
 
