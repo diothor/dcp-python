@@ -1,5 +1,11 @@
 # Daily Coding Problems
 
+### [Problem #476 [Medium]](number_problems/problem_476.py)
+This problem was asked by Google.
+
+You are given an array of length `n + 1` whose elements belong to the set `{1, 2, ..., n}`. By the pigeonhole principle, 
+there must be a duplicate. Find it in linear time and space.
+
 ### [Problem #473 [Medium]](graph_problems/problem_473.py)
 This problem was asked by Yahoo.
 
