@@ -1,21 +1,21 @@
-from typing import List
+from typing import Union, List, Any
 
 
-def permutations(args: List[any], start: int = 0) -> List[List[any]]:
-    if len(args) - start < 3:
-        reverse_stop_index = start - 1 if start > 0 else None
-        return [args[start:], args[-1:reverse_stop_index:-1]]
+# O(n*n!)
+def permutations(elements_to_permute: List[Any], current_permutation: Union[List[Any], None] = None):
+    if current_permutation is None:
+        current_permutation = []
 
-    res = []
-    for i in range(len(args)):
-        new_args = args[:i] + args[i+1:]
-        perms = permutations(new_args)
-        for p in perms:
-            p.insert(0, args[i])
-            res.append(p)
+    if not elements_to_permute:
+        return [current_permutation]
+
+    generated_permutations = []
+    for num in elements_to_permute:  # n * (n - 1) * (n - 2) * ... * 1 = n! => O(n!)
+        next_permutation = current_permutation + [num]  # O(n)
+        remaining_nums = [i for i in elements_to_permute if i != num]  # O(n)
+        generated_permutations += permutations(remaining_nums, next_permutation)
     else:
-        res.sort()
-        return res
+        return generated_permutations
 
 
 assert permutations([1, 2, 3]) == sorted([[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]])
@@ -25,5 +25,5 @@ assert permutations([1, 2, 3, 4]) == sorted([
 ])
 assert permutations(['A', 'B']) == [['A', 'B'], ['B', 'A']]
 
-# duplicates - I know it sucks
-assert permutations(['A', 'A']) == [['A', 'A'], ['A', 'A']]
+# the algorithm suscks for duplicates - mostly cause of line #15
+assert permutations(['A', 'A']) == [['A'], ['A']]
