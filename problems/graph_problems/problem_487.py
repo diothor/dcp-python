@@ -31,6 +31,7 @@ class BinaryNode:
             res = self.right.level(node_valu, current + 1)
         return res
 
+    # O(n)
     def find_parent(self, node_val) -> Tuple[Union[BinaryNode, None], Union[bool, None]]:
         if self.left and self.left.value == node_val:
             return self, True
@@ -44,6 +45,7 @@ class BinaryNode:
             res, left_side = self.right.find_parent(node_val)
         return res, left_side
 
+    # O(n)
     def find_sibling(self, node_val: Any) -> Union[Any, None]:
         (parent, left_side) = self.find_parent(node_val)
         if not parent:
@@ -53,6 +55,7 @@ class BinaryNode:
         else:
             return parent.left.value if parent.left else None
 
+    # O(n)
     def all_from_level(self, level, nodes=None) -> List[BinaryNode]:
         if nodes is None:
             nodes = []
@@ -65,6 +68,7 @@ class BinaryNode:
             self.right.all_from_level(level - 1, nodes)
         return nodes
 
+    # O(n)
     def cousins(self, node_value: Any) -> List[Any]:
         level = self.level(node_value)
         if level is None:
@@ -77,6 +81,7 @@ class BinaryNode:
         return values_on_level
 
 
+# O(n)
 def build_tree(*args, index=0) -> Union[BinaryNode, None]:
     if index >= len(args) or args[index] is None:
         return None
