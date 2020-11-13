@@ -1,6 +1,6 @@
 # Daily Coding Problems
 
-### [Problem #486 [Easy]](others/problem_486.py)
+### [Problem #486 [Medium]](others/problem_486.py)
 This problem was asked by Pinterest.
 
 At a party, there is a single person who everyone knows, but who does not know anyone in return (the "celebrity"). 
