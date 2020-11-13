@@ -23,6 +23,11 @@ if person `a` knows person `b`, else `False`.
 
 Given a list of `N` people and the above operation, find a way to identify the celebrity in `O(N)` time.
 
+### [Problem #484 [Medium]](graph_problems/problem_484.py)
+This problem was asked by Dropbox.
+
+Given the root to a binary search tree, find the second largest node in the tree.
+
 ### [Problem #483 [Easy]](number_problems/problem_483.py)
 This problem was asked by Bloomberg.
 
