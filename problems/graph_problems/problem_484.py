@@ -1,5 +1,6 @@
 from __future__ import annotations
-from typing import Union, List, Any
+from typing import List, Any, Optional
+from itertools import islice
 
 
 class BstNode:
@@ -26,6 +27,15 @@ class BstNode:
                 valid &= self.bigger.is_valid()
         return valid
 
+    def reversed_in_order_generator(self):
+        if self.bigger:
+            for data in self.bigger.reversed_in_order_generator():
+                yield data
+        yield self.data
+        if self.smaller:
+            for data in self.smaller.reversed_in_order_generator():
+                yield data
+
     # O(n)
     def in_order_reverersed(self) -> List[Any]:
         res = []
@@ -36,13 +46,16 @@ class BstNode:
             res += self.smaller.in_order_reverersed()
         return res
 
-    # O(n)
+    # O(h) - h is height of BST equal to n-1 in worst case
     def second_largest(self) -> Any:
-        data = self.in_order_reverersed()
-        return data[1] if len(data) > 1 else None
+        data_gen = self.reversed_in_order_generator()
+        try:
+            return next(islice(data_gen, 1, None))
+        except StopIteration:
+            return None
 
 
-def build_tree(*args: Any, start: int = 0) -> Union[BstNode, None]:
+def build_tree(*args: Any, start: int = 0) -> Optional[BstNode]:
     if start >= len(args) or args[start] is None:
         return None
     new_node = BstNode(args[start])
