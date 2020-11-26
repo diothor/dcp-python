@@ -426,6 +426,11 @@ more than once in the window.
 
 For example, given "jiujitsu", you should return `5`, corresponding to the final five letters.
 
+### [Problem #310 [Medium]](number_problems/problem_310.py)
+This problem was asked by Pivotal.
+
+Write an algorithm that finds the total number of set bits in all integers between `1` and `N`.
+
 ### [Problem #272 [Medium]](number_problems/problem_272)
 Write a function, `throw_dice(N, faces, total)`, that determines how many ways it is possible to throw `N` dice with 
 some number of faces each to get a specific total.
