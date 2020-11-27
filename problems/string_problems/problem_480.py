@@ -42,3 +42,6 @@ assert decode({'bed', 'bath', 'bedbath', 'and', 'beyond'}, 'bedbathandbeyond') =
 assert decode(set(), 'aaa') is None
 assert decode(set('bbb'), 'aaa') is None
 assert decode(set('bbb'), 'bbbaaa') is None
+
+assert decode({'i', 'like', 'sam', 'sung', 'samsung', 'mobile', 'ice', 'cream', 'icecream', 'man', 'go', 'mango'}, 'ilike') == ['i', 'like']
+assert decode({'i', 'like', 'sam', 'sung', 'samsung', 'mobile', 'ice', 'cream', 'icecream', 'man', 'go', 'mango'}, 'ilikesamsung') == ['i', 'like', 'sam', 'sung'] or ['i', 'like', 'samsung']
