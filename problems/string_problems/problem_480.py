@@ -41,3 +41,4 @@ assert decode({'bed', 'bath', 'bedbath', 'and', 'beyond'}, 'bedbathandbeyond') =
 
 assert decode(set(), 'aaa') is None
 assert decode(set('bbb'), 'aaa') is None
+assert decode(set('bbb'), 'bbbaaa') is None
