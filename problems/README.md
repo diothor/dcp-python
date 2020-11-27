@@ -54,6 +54,22 @@ For example, if `N = 5` and `k = 2`, the order of executions would be `[2, 4, 1,
 
 Bonus: Find an `O(log N)` solution if `k = 2`.
 
+### [Problem #482 [Medium]](graph_problems/problem_482.py)
+This problem was asked by Google.
+
+Given a binary search tree and a range `[a, b]` (inclusive), return the sum of the elements of the binary search tree 
+within the range.
+
+For example, given the following tree:
+```
+    5
+   / \
+  3   8
+ / \ / \
+2  4 6  10
+```
+and the range `[4, 9]`, return `23` `(5 + 4 + 6 + 8)`.
+
 ### [Problem #480 [Medium]](string_problems/problem_480.py)
 This problem was asked by Microsoft.
 
