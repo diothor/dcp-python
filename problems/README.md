@@ -1,5 +1,13 @@
 # Daily Coding Problems
 
+### [Problem #543 [Medium]](data_structures/problem_543.py)
+This problem was asked by Google.
+
+Given a singly linked list and an integer `k`, remove the `kth` last element from the list. `k` is guaranteed to be 
+smaller than the length of the list.
+
+The list is very long, so making more than one pass is prohibitively expensive.
+
 ### [Problem #534 [Easy]](string_problems/problem_534.py)
 This problem was asked by Amazon.
 
