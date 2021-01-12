@@ -678,7 +678,7 @@ For example, given the following board:
 and `start = (3, 0)` (bottom left) and `end = (0, 0)` (top left), the minimum number of steps required to reach the end 
 is `7`, since we would need to go through `(1, 2)` because there is a wall everywhere else on the second row.
 
-### [Problem #21 [Easy]](problem_021.py)
+### [Problem #21 [Easy]](number_problems/problem_021.py)
 This problem was asked by Snapchat.
 
 Given an array of time intervals (start, end) for classroom lectures (possibly overlapping), 
