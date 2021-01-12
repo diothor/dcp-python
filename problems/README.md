@@ -16,6 +16,15 @@ Given a string, determine whether any permutation of it is a palindrome.
 For example, `carrace` should return true, since it can be rearranged to form `racecar`, which is a palindrome. `daily` 
 should return false, since there's no rearrangement that can form a palindrome.
 
+### [Problem #530 [Easy]](string_problems/problem_530.py)
+This problem was asked by Google.
+
+The edit distance between two strings refers to the minimum number of character insertions, deletions, and substitutions 
+required to change one string to the other. For example, the edit distance between `“kitten”` and `“sitting”` is three: 
+substitute the `“k”` for `“s”`, substitute the `“e”` for `“i”`, and append a `“g”`.
+
+Given two strings, compute the edit distance between them.
+
 ### [Problem #505 [Easy]](number_problems/problem_505.py)
 This problem was asked by Amazon.
 
