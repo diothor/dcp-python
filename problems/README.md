@@ -499,6 +499,13 @@ This problem was asked by Pivotal.
 
 Write an algorithm that finds the total number of set bits in all integers between `1` and `N`.
 
+### [Problem #303 [Easy]](number_problems/problem_303.py)
+This problem was asked by Microsoft.
+
+Given a clock time in `hh:mm` format, determine, to the nearest degree, the angle between the hour and the minute hands.
+
+Bonus: When, during the course of a day, will the angle be zero?
+
 ### [Problem #272 [Medium]](number_problems/problem_272)
 Write a function, `throw_dice(N, faces, total)`, that determines how many ways it is possible to throw `N` dice with 
 some number of faces each to get a specific total.

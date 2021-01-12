@@ -1,3 +1,4 @@
+# O(1)
 def clock_hands_angle(hh_mm: str) -> int:
     hh, mm = map(int, hh_mm.split(':'))
     minute_hand = 360 / 60 * mm
