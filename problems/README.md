@@ -31,6 +31,12 @@ This problem was asked by Amazon.
 Given an array and a number `k` that's smaller than the length of the array, rotate the array to the right `k` 
 elements in-place.
 
+### [Problem #502 [Easy]](graph_problems/problem_502.py)
+This problem was asked by PayPal.
+
+Given a binary tree, determine whether or not it is height-balanced. A height-balanced binary tree can be defined as one 
+in which the heights of the two subtrees of any node never differ by more than one.
+
 ### [Problem #491 [Easy]](number_problems/problem_491.py)
 This problem was asked by Palantir.
 
