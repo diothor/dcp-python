@@ -31,6 +31,14 @@ This problem was asked by Amazon.
 Given an array and a number `k` that's smaller than the length of the array, rotate the array to the right `k` 
 elements in-place.
 
+### [Problem #504 [Easy]](data_structures/problem_504.py)
+You run an e-commerce website and want to record the last `N` `order` ids in a log. Implement a data structure to 
+accomplish this, with the following API:
+* `record(order_id)`: adds the `order_id` to the log
+* `get_last(i)`: gets the `ith` last element from the log. `i` is guaranteed to be smaller than or equal to `N`.
+
+You should be as efficient with time and space as possible.
+
 ### [Problem #502 [Easy]](graph_problems/problem_502.py)
 This problem was asked by PayPal.
 
