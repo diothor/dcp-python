@@ -508,6 +508,20 @@ more than once in the window.
 
 For example, given "jiujitsu", you should return `5`, corresponding to the final five letters.
 
+### [Problem #312 [Medium]](number_problems/problem_312.py)
+This problem was asked by Wayfair.
+
+You are given a `2 x N` board, and instructed to completely cover the board with the following shapes:
+* Dominoes, or 2 x 1 rectangles.
+* Trominoes, or L-shapes.
+
+For example, if `N = 4`, here is one possible configuration, where `A` is a domino, and `B` and `C` are trominoes.
+```
+A B B C
+A B C C
+```
+Given an integer `N`, determine in how many ways this task is possible.
+
 ### [Problem #310 [Medium]](number_problems/problem_310.py)
 This problem was asked by Pivotal.
 
