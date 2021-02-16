@@ -1,5 +1,42 @@
 # Daily Coding Problems
 
+### [Problem #581 [Easy]](others/problem_581.py)
+This problem was asked by Google.
+
+Given two rectangles on a 2D graph, return the area of their intersection. If the rectangles don't intersect, return 0.
+
+For example, given the following rectangles:
+```
+{
+    "top_left": (1, 4),
+    "dimensions": (3, 3) # width, height
+}
+```
+and
+```
+{
+    "top_left": (0, 5),
+    "dimensions": (4, 3) # width, height
+}
+```
+return 6.
+
+### [Problem #580 [Easy]](graph_problems/problem_580.py)
+This question was asked by Apple.
+
+Given a binary tree, find a minimum path sum from root to a leaf.
+
+For example, the minimum path in this tree is [10, 5, 1, -1], which has sum 15.
+```
+  10
+ /  \
+5    5
+ \     \
+   2    1
+       /
+     -1
+```
+
 ### [Problem #578 [Easy]](string_problems/problem_578.py)
 This problem was asked by Bloomberg.
 
