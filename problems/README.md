@@ -1,5 +1,25 @@
 # Daily Coding Problems
 
+### [Problem #588 [Easy]](data_structures/problem_588.py)
+This problem was asked by Facebook.
+
+You have a large array with most of the elements as zero.
+
+Use a more space-efficient data structure, SparseArray, that implements the same interface:
+
+* `init(arr, size)`: initialize with the original large array and size.
+* `set(i, val)`: updates index at `i` with `val`.
+* `get(i)`: gets the value at index `i`.
+
+
+### [Problem #584 [Easy]](string_problems/problem_584.py)
+This problem was asked by IBM.
+
+Given a string with repeated characters, rearrange the string so that no two adjacent characters are the same. 
+If this is not possible, return `None`.
+
+For example, given "aaabbc", you could return "ababac". Given "aaab", return `None`.
+
 ### [Problem #581 [Easy]](others/problem_581.py)
 This problem was asked by Google.
 
