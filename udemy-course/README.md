@@ -1,3 +1,5 @@
+# Problems from [Algorithms and Data Structures in Python](https://www.udemy.com/course/algorithms-and-data-structures-in-python/) Course on Udemy 
+
 ## [Stacks & Queues problems](stack_queue)
 
 ### [Max in a stack problem overview](stack_queue/max_in_stack.py)

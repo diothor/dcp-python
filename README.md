@@ -7,7 +7,7 @@ Here you will find my solutions for some of algorithmic riddles from [Daily Codi
 
 ## [Udemy Algorithms Course questions](udemy-course)
 On Udemy there is cool [course](https://www.udemy.com/course/algorithms-and-data-structures-in-python/) about 
-algorithms and data structures. It contains some interview questions for each chapter. Solutions for these questions 
+algorithms and data structures. It contains some interview problems for each chapter. Solutions for these questions 
 can be found in this section. 
 
 ## [Sort Algortithms](sort)

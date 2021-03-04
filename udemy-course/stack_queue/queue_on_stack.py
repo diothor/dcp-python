@@ -20,11 +20,3 @@ class QueueOnStack:
             while not self.front.is_empty():
                 self.rear.push(self.front.pop())
         return self.rear.pop()
-
-
-test_queue = QueueOnStack()
-test_queue.enqueue(0).enqueue(1).enqueue(2)
-print(test_queue.dequeue())
-print(test_queue.dequeue())
-print(test_queue.dequeue())
-print(test_queue.dequeue())
