@@ -15,3 +15,6 @@ class Stack:
 
     def peek(self) -> Optional[int]:
         return self.stack[-1] if self.stack else None
+
+    def is_empty(self):
+        return not self.stack
