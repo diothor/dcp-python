@@ -1,6 +1,6 @@
 # Daily Coding Problems
 
-### [Problem #598 [Easy]]()
+### [Problem #598 [Easy]](number_problems/problem_598.py)
 This problem was asked by Microsoft.
 
 You have `n` fair coins and you flip them all at the same time. Any that come up tails you set aside. The ones that come up 
