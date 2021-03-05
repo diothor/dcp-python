@@ -1,37 +1,12 @@
 # Daily Coding Problems
 
-### [Problem #597 [Easy]](number_problems/problem_597.py)
-This problem was asked by Netflix.
+### [Problem #598 [Easy]](number_problems/problem_598.py)
+This problem was asked by Microsoft.
 
-Given an array of integers, determine whether it contains a Pythagorean triplet. Recall that a Pythogorean triplet 
-`(a, b, c)` is defined by the equation `a^2 + b^2 = c^2`.
+You have `n` fair coins and you flip them all at the same time. Any that come up tails you set aside. The ones that come up 
+heads you flip again. How many rounds do you expect to play before only one coin remains?
 
-### [Problem #594 [Easy]](graph_problems/problem_594.py)
-This problem was asked by Google.
-
-You are given an N by N matrix of random letters and a dictionary of words. Find the maximum number of words that can be 
-packed on the board from the given dictionary.
-
-A word is considered to be able to be packed on the board if:
-
-* It can be found in the dictionary
-* It can be constructed from untaken letters by other words found so far on the board
-* The letters are adjacent to each other (vertically and horizontally, not diagonally).
-
-Each tile can be visited only once by any word.
-
-For example, given the following dictionary:
-
-`{ 'eat', 'rain', 'in', 'rat' }`
-
-and matrix:
-```
-[['e', 'a', 'n'],
- ['t', 't', 'i'],
- ['a', 'r', 'a']]
-```
-Your function should return 3, since we can make the words 'eat', 'in', and 'rat' without them touching each other. 
-We could have alternatively made 'eat' and 'rain', but that would be incorrect since that's only 2 words.
+Write a function that, given `n`, returns the number of rounds you'd expect to play until one coin remains.
 
 ### [Problem #588 [Easy]](data_structures/problem_588.py)
 This problem was asked by Facebook.
