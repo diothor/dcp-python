@@ -1,11 +1,5 @@
 # Daily Coding Problems
 
-### [Problem #597 [Easy]](number_problems/problem_597.py)
-This problem was asked by Netflix.
-
-Given an array of integers, determine whether it contains a Pythagorean triplet. Recall that a Pythogorean triplet 
-`(a, b, c)` is defined by the equation `a^2 + b^2 = c^2`.
-
 ### [Problem #594 [Easy]](graph_problems/problem_594.py)
 This problem was asked by Google.
 
