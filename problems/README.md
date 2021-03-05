@@ -8,6 +8,12 @@ heads you flip again. How many rounds do you expect to play before only one coin
 
 Write a function that, given `n`, returns the number of rounds you'd expect to play until one coin remains.
 
+### [Problem #597 [Easy]](number_problems/problem_597.py)
+This problem was asked by Netflix.
+
+Given an array of integers, determine whether it contains a Pythagorean triplet. Recall that a Pythogorean triplet 
+`(a, b, c)` is defined by the equation `a^2 + b^2 = c^2`.
+
 ### [Problem #588 [Easy]](data_structures/problem_588.py)
 This problem was asked by Facebook.
 
