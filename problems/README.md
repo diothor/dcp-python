@@ -555,7 +555,7 @@ the second element of the array, and so on until we reach the end, when we retur
 
 Implement your own version of `reduce`.
 
-### [Problem #340 [Easy]](problem_340.py)
+### [Problem #340 [Easy]](others/problem_340.py)
 This problem was asked by Google.
 
 Given a set of points (x, y) on a 2D cartesian plane, find the two closest points. For example, given the points 
