@@ -1,5 +1,12 @@
 # Daily Coding Problems
 
+### [Problem #602 [Easy]](others/problem_602.py)
+This problem was asked by Facebook.
+
+Suppose you are given two lists of `n` points, one list p1, p2, ..., pn on the line y = 0 and the other list 
+q1, q2, ..., qn on the line y = 1. Imagine a set of `n` line segments connecting each point pi to qi. 
+Write an algorithm to determine how many pairs of the line segments intersect.
+
 ### [Problem #598 [Easy]](number_problems/problem_598.py)
 This problem was asked by Microsoft.
 
