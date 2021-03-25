@@ -1,5 +1,5 @@
 # Daily Coding Problems
-### [Problem #619 [Medium]](graph_problems/problem_619.py)
+### [Problem #619 [Easy]](graph_problems/problem_619.py)
 This problem was asked by Coursera.
 
 Given a 2D board of characters and a word, find if the word exists in the grid.
