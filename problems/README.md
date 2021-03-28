@@ -1,4 +1,16 @@
 # Daily Coding Problems
+### [Problem #622 [Easy]](graph_problems/problem_622.py)
+This problem was asked by Google.
+
+Given the root of a binary tree, return a deepest node. For example, in the following tree, return d.
+```
+    a
+   / \
+  b   c
+ /
+d
+```
+
 ### [Problem #619 [Easy]](graph_problems/problem_619.py)
 This problem was asked by Coursera.
 
