@@ -1,4 +1,12 @@
 # Daily Coding Problems
+
+### [Problem #625 [Easy]](number_problems/problem_625.py)
+This problem was asked by Stripe.
+
+Given an integer `n`, return the length of the longest consecutive run of `1s` in its binary representation.
+
+For example, given `156`, you should return `3`.
+
 ### [Problem #622 [Easy]](graph_problems/problem_622.py)
 This problem was asked by Google.
 
