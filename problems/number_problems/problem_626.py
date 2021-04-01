@@ -7,27 +7,23 @@ def max_triplet_product(nums: List[int]) -> int:
     if size < 3:
         raise ValueError()
 
-    max_on_left = [float('-inf')] * size
-    min_on_left = [float('inf')] * size
+    max1, max2, max3 = float('-inf'), float('-inf'), float('-inf')
+    min1, min2 = float('inf'), float('inf')
 
-    max_on_right = [float('-inf')] * size
-    min_on_right = [float('inf')] * size
+    for n in nums:
+        if n > max1:
+            max3, max2, max1 = max2, max1, n
+        elif n > max2:
+            max3, max2 = max2, n
+        elif n > max3:
+            max3 = n
 
-    for i in range(size):
-        if i > 0:
-            max_on_left[i] = max(max_on_left[i - 1], nums[i - 1])
-            min_on_left[i] = min(min_on_left[i - 1], nums[i - 1])
-        if i < size - 1:
-            max_on_right[i] = max(max_on_right[i + 1], nums[i + 1])
-            min_on_right[i] = min(min_on_right[i + 1], nums[i + 1])
-
-    max_prod = float('-inf')
-    for i in range(1, size - 1):
-        prod_from_negative = min_on_left[i] * nums[i] * min_on_right[i]
-        prod_from_positive = max_on_left[i] * nums[i] * max_on_right[i]
-        max_prod = max(max_prod, prod_from_positive, prod_from_negative)
+        if n < min1:
+            min2, min1 = min1, n
+        elif n < min2:
+            min2 = n
     else:
-        return max_prod
+        return max(max1 * max2 * max3, min1 * min2 * max1)
 
 
 assert max_triplet_product([-10, -10, 5, 2]) == 500
