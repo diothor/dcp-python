@@ -1,5 +1,27 @@
 # Daily Coding Problems
 
+### [Problem #627 [Medium]](others/problem_627.py)
+This problem was asked by Google.
+
+Given an `iterator` with methods `next()` and `hasNext()`, create a wrapper iterator, `PeekableInterface`, which also 
+implements `peek()`. `peek` shows the next element that would be returned on `next()`.
+
+Here is the interface:
+```
+class PeekableInterface(object):
+def __init__(self, iterator):
+pass
+
+    def peek(self):
+        pass
+
+    def next(self):
+        pass
+
+    def hasNext(self):
+        pass
+```
+
 ### [Problem #626 [Easy]](number_problems/problem_626.py)
 This problem was asked by Facebook.
 
@@ -15,6 +37,15 @@ This problem was asked by Stripe.
 Given an integer `n`, return the length of the longest consecutive run of `1s` in its binary representation.
 
 For example, given `156`, you should return `3`.
+
+### [Problem 624 [Medium]](others/problem_624.py)
+This problem was asked by Google.
+
+Given a string of parentheses, write a function to compute the minimum number of parentheses to be removed to make 
+the string valid (i.e. each open parenthesis is eventually closed).
+
+For example, given the string `()())()`, you should return 1. Given the string `)(`, you should return 2, 
+since we must remove all of them.
 
 ### [Problem #622 [Easy]](graph_problems/problem_622.py)
 This problem was asked by Google.
