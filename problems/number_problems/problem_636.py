@@ -1,19 +1,20 @@
-from typing import List
+from typing import List, Optional
 
 
 # O(logn) where n is length of arr
-def min_in_pivot(arr: List[int], st: int = 0, end: int = None) -> int:
+def min_in_pivot(arr: List[int], st: int = 0, end: int = None) -> Optional[int]:
     if end is None:
         end = len(arr) - 1
+    if end < 0:
+        return None
+    elif arr[0] <= arr[-1]:
+        return arr[0]
 
     mid = (st + end) // 2
-    if mid >= end:
-        return None if end < 0 else arr[0]
     if arr[mid] > arr[mid + 1]:
         return arr[mid + 1]
-
     if arr[st] > arr[mid]:
-        return min_in_pivot(arr, st, mid)
+        return min_in_pivot(arr, st, mid - 1)
     else:
         return min_in_pivot(arr, mid + 1, end)
 
