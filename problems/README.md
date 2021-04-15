@@ -726,10 +726,10 @@ For example, our traveler wants to go from `JFK` to `LAX` with up to `3` connect
 
 Due to some improbably low flight prices, the cheapest itinerary would be `JFK -> ATL -> ORD -> LAX`, costing $440.
 
-### [Problem #342 [Medium]](problem_342.py)
+### [Problem #342 [Medium]](others/problem_342.py)
 This problem was asked by Stripe.
 
-`reduce` (also known as `fold`  ) is a function that takes in an array, a combining function, and an initial value and 
+`reduce` (also known as `fold`) is a function that takes in an array, a combining function, and an initial value and 
 builds up a result by calling the combining function on each element of the array, left to right. For example, 
 we can write `sum()` in terms of `reduce`:
 ```
