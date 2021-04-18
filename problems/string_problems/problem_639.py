@@ -42,7 +42,6 @@ def num2str(num: str, mapping: Callable[[int], List[int]] = digit2chars) -> list
                 empty_digits += 1
                 queue.append(base)
     else:
-        print(res)
         return res
 
 
