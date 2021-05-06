@@ -7,6 +7,14 @@ The power set of a set is the set of all its subsets. Write a function that, giv
 
 For example, given the set `{1, 2, 3}`, it should return `{{}, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}`
 
+### [Problem #655 [Easy]](number_problems/problem_655.py)
+This problem was asked by Facebook.
+
+Given a 32-bit integer, return the number with its bits reversed.
+
+For example, given the binary number `1111 0000 1111 0000 1111 0000 1111 0000`, return 
+`0000 1111 0000 1111 0000 1111 0000 1111`.
+
 ### [Problem #649 [Easy]](string_problems/problem_649.py)
 This problem was asked by Google.
 
