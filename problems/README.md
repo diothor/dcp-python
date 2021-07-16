@@ -9,6 +9,13 @@ smallest sets, return any of them.
 For example, given the intervals `[0, 3], [2, 6], [3, 4], [6, 9]`, one set of numbers that covers all these intervals 
 is `{3, 6}`.
 
+### [Problem #714 [Easy]](data_structures/problem_714.py)
+This problem was asked by Google.
+
+Given the head of a singly linked list, swap every two nodes and return its head.
+
+For example, given `1 -> 2 -> 3 -> 4`, return `2 -> 1 -> 4 -> 3`.
+
 ### [Problem #678 [Easy]](number_problems/problem_678.py)
 This problem was asked by IBM.
 
