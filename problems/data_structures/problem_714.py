@@ -23,7 +23,7 @@ class LinkedListNode:
 
 
 # O(n)
-def build_linked_list(*values) -> LinkedListNode:
+def linked_list(*values) -> LinkedListNode:
     if not values:
         return LinkedListNode(None)
 
@@ -37,8 +37,8 @@ def build_linked_list(*values) -> LinkedListNode:
 
 
 # O(n)
-def swap_every_two(linked_list: LinkedListNode):
-    first = linked_list
+def swap_every_two(list_to_swap: LinkedListNode):
+    first = list_to_swap
     if not first or not first.next:
         return first
 
@@ -49,5 +49,8 @@ def swap_every_two(linked_list: LinkedListNode):
     return second
 
 
-assert list(swap_every_two(build_linked_list(1, 2, 3, 4))) == [2, 1, 4, 3]
-assert list(swap_every_two(build_linked_list(1, 2, 3, 4, 5))) == [2, 1, 4, 3, 5]
+assert list(swap_every_two(linked_list(1, 2, 3, 4))) == [2, 1, 4, 3]
+assert list(swap_every_two(linked_list(1, 2, 3, 4, 5))) == [2, 1, 4, 3, 5]
+assert list(swap_every_two(linked_list(1, 2, 3, 4, 5, 6))) == [2, 1, 4, 3, 6, 5]
+
+assert list(swap_every_two(linked_list())) == [None]
