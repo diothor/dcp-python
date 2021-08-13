@@ -1,17 +1,17 @@
-# O(n) where n is number of chunks in flatten keys
-def flatten_dict(nested: dict) -> dict:
-    flat = {}
-    for key, value in nested.items():
+# O(n) where n is number of keys
+def flatten_dict(nested_dict: dict, key_prefix: str = '') -> dict:
+    flat_dict = {}
+    for key, value in nested_dict.items():
+        nested_key = f'{key_prefix}.{key}' if key_prefix else key
         if isinstance(value, dict):
-            for nested_key, nested_value in flatten_dict(value).items():
-                flat[f'{key}.{nested_key}'] = nested_value
+            flat_dict.update(flatten_dict(value, nested_key))
         else:
-            flat[key] = value
+            flat_dict[nested_key] = value
     else:
-        return flat
+        return flat_dict
 
 
-nested_dict = {
+test_dict = {
     "key": 3,
     "foo": {
         "a": 5,
@@ -22,7 +22,7 @@ nested_dict = {
     }
 }
 
-assert flatten_dict(nested_dict) == {
+assert flatten_dict(test_dict) == {
     "key": 3,
     "foo.a": 5,
     "foo.bar.baz": 8,
@@ -54,3 +54,4 @@ assert flatten_dict(geek_dict) == {
     'Geeks.for.for': 1,
     'for.geeks.Geeks': 3
 }
+
