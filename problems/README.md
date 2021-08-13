@@ -33,6 +33,33 @@ Given two strings A and B, return whether or not A can be shifted some number of
 
 For example, if A is `abcde` and B is `cdeab`, return true. If A is `abc` and B is `acb`, return false.
 
+### [Problem #742 [Easy]](others/problem_742.py)
+This problem was asked by Stripe.
+
+Write a function to flatten a nested dictionary. Namespace the keys with a period.
+
+For example, given the following dictionary:
+```
+{
+    "key": 3,
+    "foo": {
+        "a": 5,
+        "bar": {
+            "baz": 8
+        }
+    }
+}
+```
+it should become:
+```
+{
+    "key": 3,
+    "foo.a": 5,
+    "foo.bar.baz": 8
+}
+```
+You can assume keys do not contain dots in them, i.e. no clobbering will occur.
+
 ### [Problem #723 [Medium]](number_problems/problem_723.py)
 This problem was asked by Google.
 
