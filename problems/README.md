@@ -26,6 +26,13 @@ For example, given the following tree:
 ```
 Return `2` as it occurs twice: once as the left leaf, and once as the sum of `2 + 5 - 5`.
 
+### [Problem #747 [Easy]](string_problems/problem_747.py)
+This problem was asked by Google.
+
+Given two strings A and B, return whether or not A can be shifted some number of times to get B.
+
+For example, if A is `abcde` and B is `cdeab`, return true. If A is `abc` and B is `acb`, return false.
+
 ### [Problem #723 [Medium]](number_problems/problem_723.py)
 This problem was asked by Google.
 
