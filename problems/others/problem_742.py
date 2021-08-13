@@ -54,4 +54,3 @@ assert flatten_dict(geek_dict) == {
     'Geeks.for.for': 1,
     'for.geeks.Geeks': 3
 }
-
