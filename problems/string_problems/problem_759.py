@@ -43,14 +43,17 @@ assert parse_octet('001', 2) == ['0']
 
 
 # O(1)
-def ips(digits: str, start: int = 0, octet_num: int = 1) -> List[str]:
+def ips(digits: str, digits_size: int = -1, start: int = 0, octet_num: int = 1) -> List[str]:
+    if digits_size < 0:
+        digits_size = len(digits)
+
     _ips = []
     for octet_value in parse_octet(digits[start:start + 3], octet_num):
         octet_size = len(octet_value)
-        if octet_num == 4 and start + octet_size == len(digits):
+        if octet_num == 4 and start + octet_size == digits_size:
             _ips.append(octet_value)
         else:
-            _ips.extend([f'{octet_value}.{rest_of_ip}' for rest_of_ip in ips(digits, start + octet_size, octet_num + 1)])
+            _ips.extend([f'{octet_value}.{rest_of_ip}' for rest_of_ip in ips(digits, digits_size, start + octet_size, octet_num + 1)])
     else:
         return sorted(_ips)
 
