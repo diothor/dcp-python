@@ -7,15 +7,8 @@ def octet_permutations(octet_str: str, octet_num: int = 1) -> List[Tuple[str, in
         return []
     if octet_str[0] == '0':
         return [] if octet_num == 1 else [('0', 1)]
-    permutations = []
-    new_value = ''
-    for index, digit in enumerate(octet_str):  # O(3)
-        new_value += digit
-        if int(new_value) < 256:
-            permutations.append((new_value, index + 1))
-        else:
-            break
-    return permutations
+    digits_num = min(3, len(octet_str))
+    return [(octet_str[0: size], size) for size in range(1, digits_num + 1) if int(octet_str[0: size]) < 256]
 
 
 assert octet_permutations('') == []
