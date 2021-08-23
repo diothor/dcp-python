@@ -1,45 +1,45 @@
-from typing import List
+from typing import List, Tuple
 
 
 # O(1)
-def parse_octet(octet_str: str, octet_num: int = 1) -> List[str]:
+def octet_permutations(octet_str: str, octet_num: int = 1) -> List[Tuple[str, int]]:
     if not octet_str:
         return []
     if octet_str[0] == '0':
-        return [] if octet_num == 1 else ['0']
-    octet_values = []
+        return [] if octet_num == 1 else [('0', 1)]
+    permutations = []
     new_value = ''
-    for digit in octet_str:  # O(3)
+    for index, digit in enumerate(octet_str):  # O(3)
         new_value += digit
         if int(new_value) < 256:
-            octet_values.append(new_value)
+            permutations.append((new_value, index + 1))
         else:
             break
-    return octet_values
+    return permutations
 
 
-assert parse_octet('') == []
+assert octet_permutations('') == []
 # single digit
-assert parse_octet('1') == ['1']
-assert parse_octet('9') == ['9']
-assert parse_octet('0') == []
-assert parse_octet('0', 2) == ['0']
+assert octet_permutations('1') == [('1', 1)]
+assert octet_permutations('9') == [('9', 1)]
+assert octet_permutations('0') == []
+assert octet_permutations('0', 2) == [('0', 1)]
 
 # two digits
-assert parse_octet('10') == ['1', '10']
-assert parse_octet('99') == ['9', '99']
-assert parse_octet('01') == []
-assert parse_octet('01', 2) == ['0']
+assert octet_permutations('10') == [('1', 1), ('10', 2)]
+assert octet_permutations('99') == [('9', 1), ('99', 2)]
+assert octet_permutations('01') == []
+assert octet_permutations('01', 2) == [('0', 1)]
 
 # three digits
-assert parse_octet('100') == ['1', '10', '100']
-assert parse_octet('255') == ['2', '25', '255']
-assert parse_octet('256') == ['2', '25']
-assert parse_octet('999') == ['9', '99']
-assert parse_octet('011') == []
-assert parse_octet('011', 2) == ['0']
-assert parse_octet('001') == []
-assert parse_octet('001', 2) == ['0']
+assert octet_permutations('100') == [('1', 1), ('10', 2), ('100', 3)]
+assert octet_permutations('255') == [('2', 1), ('25', 2), ('255', 3)]
+assert octet_permutations('256') == [('2', 1), ('25', 2)]
+assert octet_permutations('999') == [('9', 1), ('99', 2)]
+assert octet_permutations('011') == []
+assert octet_permutations('011', 2) == [('0', 1)]
+assert octet_permutations('001') == []
+assert octet_permutations('001', 2) == [('0', 1)]
 
 
 # O(1)
@@ -48,12 +48,11 @@ def ips(digits: str, digits_size: int = -1, start: int = 0, octet_num: int = 1) 
         digits_size = len(digits)
 
     _ips = []
-    for octet_value in parse_octet(digits[start:start + 3], octet_num):
-        octet_size = len(octet_value)
-        if octet_num == 4 and start + octet_size == digits_size:
+    for octet_value, octet_len in octet_permutations(digits[start:start + 3], octet_num):
+        if octet_num == 4 and start + octet_len == digits_size:
             _ips.append(octet_value)
         else:
-            _ips.extend([f'{octet_value}.{rest_of_ip}' for rest_of_ip in ips(digits, digits_size, start + octet_size, octet_num + 1)])
+            _ips.extend([f'{octet_value}.{rest_of_ip}' for rest_of_ip in ips(digits, digits_size, start + octet_len, octet_num + 1)])
     else:
         return sorted(_ips)
 
