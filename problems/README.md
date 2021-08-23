@@ -1252,6 +1252,12 @@ For example, for the input `[1, 2, 3, 10]`, you should return `7`.
 
 Do this in `O(N)` time.
 
+### [Problem #071 [Easy]](number_problems/problem_71.py)
+This problem was asked by Two Sigma.
+
+Using a function `rand7()` that returns an integer from 1 to 7 (inclusive) with uniform probability, implement 
+a function `rand5()` that returns an integer from 1 to 5 (inclusive).
+
 ### [Problem #050 [Easy]](graph_problems/problem_050.py)
 This problem was asked by Microsoft.
 
