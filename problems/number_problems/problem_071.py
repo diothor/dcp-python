@@ -14,4 +14,5 @@ def rand5() -> int:
 values = [rand5() for _ in range(50000)]
 
 stats = Counter(values)
+assert len(stats) == 5
 assert all([9700 < v < 10300 for v in stats.values()])
