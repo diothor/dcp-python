@@ -43,28 +43,16 @@ assert parse_octet('001', 2) == ['0']
 
 
 # O(1)
-def ips(digits: str, start: int = 0) -> List[str]:
-    res = []
-    frst_octet_values = parse_octet(digits[0:3], 1)
-    # O(3)
-    for v1 in frst_octet_values:
-        snd_start = len(v1)
-        snd_octet_values = parse_octet(digits[snd_start: snd_start + 3], 2)
-        # O(3)
-        for v2 in snd_octet_values:
-            trd_start = snd_start + len(v2)
-            trd_octet_values = parse_octet(digits[trd_start: trd_start + 3], 3)
-            # O(3)
-            for v3 in trd_octet_values:
-                fth_start = trd_start + len(v3)
-                fth_octet_values = parse_octet(digits[fth_start: fth_start + 3], 4)
-                # O(3)
-                for v4 in fth_octet_values:
-                    fth_end = fth_start + len(v4)
-                    if fth_end == len(digits):
-                        res.append(f'{v1}.{v2}.{v3}.{v4}')
+def ips(digits: str, start: int = 0, octet_num: int = 1) -> List[str]:
+    _ips = []
+    for octet_value in parse_octet(digits[start:start + 3], octet_num):
+        octet_size = len(octet_value)
+        if octet_num == 4 and start + octet_size == len(digits):
+            _ips.append(octet_value)
+        else:
+            _ips.extend([f'{octet_value}.{rest_of_ip}' for rest_of_ip in ips(digits, start + octet_size, octet_num + 1)])
     else:
-        return sorted(res)
+        return sorted(_ips)
 
 
 # basic cases
