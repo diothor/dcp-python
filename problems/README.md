@@ -10,6 +10,12 @@ Zero-prefixed numbers, such as `01` and `065`, are not allowed, except for `0` i
 
 For example, given `2542540123`, you should return `['254.25.40.123', '254.254.0.123']`.
 
+### [Problem #758 [Medium]](number_problems/problem_758.py)
+This problem was asked by Facebook.
+
+Write a function that rotates a list by k elements. For example, `[1, 2, 3, 4, 5, 6]` rotated by two becomes 
+`[3, 4, 5, 6, 1, 2]`. Try solving this without creating a copy of the list. How many swap or move operations do you need?
+
 ### [Problem #752 [Easy]](graph_problems/problem_752.py)
 This problem was asked by Microsoft.
 
