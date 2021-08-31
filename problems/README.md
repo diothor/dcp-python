@@ -1,5 +1,11 @@
 # Daily Coding Problems
 
+### [Problem #764 [Medium]](number_problems/problem_764.py)
+This problem was asked by Twitter.
+
+Given a list of numbers, create an algorithm that arranges them in order to form the largest possible integer. 
+For example, given `[10, 7, 76, 415]`, you should return `77641510`.
+
 ### [Problem #759 [Medium]](string_problems/problem_759.py)
 This problem was asked by Snapchat.
 
