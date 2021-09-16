@@ -1,5 +1,15 @@
 # Daily Coding Problems
 
+### [Problem #786 [Medium]](number_problems/problem_786.py)
+his problem was asked by Google.
+
+Implement integer exponentiation. That is, implement the `pow(x, y)` function, where `x` and `y` are integers and 
+returns `x^y`.
+
+Do this faster than the naive method of repeated multiplication.
+
+For example, `pow(2, 10)` should return 1024.
+
 ### [Problem #774 [Easy]](others/problem_774.py)
 This problem was asked Microsoft.
 
