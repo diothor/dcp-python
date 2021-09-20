@@ -1,11 +1,11 @@
 # O(n)
 def is_palindrome(num: int) -> bool:
-    digits = []
+    org_num, reversed_num = num, 0
     while num > 0:
         num, digit = divmod(num, 10)
-        digits.append(digit)
+        reversed_num = reversed_num*10 + digit
     else:
-        return digits == digits[::-1]
+        return org_num == reversed_num
 
 
 assert is_palindrome(121) is True
