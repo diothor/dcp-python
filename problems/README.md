@@ -51,6 +51,17 @@ Spreadsheets often use this alphabetical encoding for its columns: "A", "B", "C"
 
 Given a column number, return its alphabetical column id. For example, given 1, return "A". Given 27, return "AA".
 
+### [Problem #794 [Easy]](data_structures/problem_794.py)
+This problem was asked by Amazon.
+
+Implement a stack that has the following methods:
+
+* push(val), which pushes an element onto the stack
+* pop(), which pops off and returns the topmost element of the stack. If there are no elements in the stack, then it should throw an error or return null.
+* max(), which returns the maximum value in the stack currently. If there are no elements in the stack, then it should throw an error or return null.
+
+Each method should run in constant time.
+
 ### [Problem #786 [Medium]](number_problems/problem_786.py)
 his problem was asked by Google.
 
