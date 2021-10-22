@@ -51,6 +51,12 @@ Spreadsheets often use this alphabetical encoding for its columns: "A", "B", "C"
 
 Given a column number, return its alphabetical column id. For example, given 1, return "A". Given 27, return "AA".
 
+### [Problem #801 [Easy]](number_problems/problem_801.py)
+This problem was asked by Zillow.
+
+Let's define a "sevenish" number to be one which is either a power of `7`, or the sum of unique powers of `7`. 
+The first few sevenish numbers are `1`, `7`, `8`, `49`, and so on. Create an algorithm to find the `n`th sevenish number.
+
 ### [Problem #794 [Easy]](data_structures/problem_794.py)
 This problem was asked by Amazon.
 
