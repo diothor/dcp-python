@@ -1,3 +1,6 @@
+from itertools import islice
+
+
 # O(nloglogn)
 def primes(limit: int) -> list:
     is_prime = [True] * limit
@@ -23,30 +26,21 @@ assert primes(20) == [2, 3, 5, 7, 11, 13, 17, 19]
 
 
 def prime_generator():
-    def is_prime(num: int) -> bool:
-        if num < 2:
-            return False
-        elif num == 2:
-            return True
-        elif num % 2 == 0:
-            return False
-        else:
-            div = 3
-            while div*div <= num:
-                if num % div == 0:
-                    return False
-                div += 1
-            else:
-                return True
-
+    not_primes = {}
     next_prime = 2
     while True:
+        not_primes[next_prime * next_prime] = next_prime
         yield next_prime
         next_prime += 1
-        while not is_prime(next_prime):
+        while next_prime in not_primes.keys():
+            prime_base = not_primes[next_prime]
+            next_multiple = next_prime + prime_base
+            if next_multiple in not_primes:
+                next_multiple += prime_base
+            not_primes[next_multiple] = prime_base
+            del (not_primes[next_prime])
             next_prime += 1
 
 
-prime_gen = prime_generator()
-for _ in range(10):
-    print(next(prime_gen))
+prime_nums = list(islice(prime_generator(), 10))
+assert prime_nums == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
