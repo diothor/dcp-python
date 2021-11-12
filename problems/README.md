@@ -6,6 +6,28 @@ This problem was asked by Microsoft.
 Given a string and a pattern, find the starting indices of all occurrences of the pattern in the string. For example, 
 given the string "abracadabra" and the pattern "abr", you should return `[0, 7]`.
 
+### [Problem #842 [Medium]](graph_problems/problem_842.py)
+This problem was asked by Google.
+
+Invert a binary tree.
+
+For example, given the following tree:
+```
+    a
+   / \
+  b   c
+ / \  /
+d   e f
+```
+should become:
+```
+  a
+ / \
+ c  b
+ \ / \
+ f e  d
+```
+
 ### [Problem #819 [Easy]](number_problems/problem_819.py)
 This problem was asked by Facebook.
 
