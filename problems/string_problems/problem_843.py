@@ -2,7 +2,7 @@ from typing import List
 
 
 # O(n*k)
-def start_indices(text: str, pattern: str) -> List[int]:
+def find_indices(text: str, pattern: str) -> List[int]:
     n = len(text)
     k = len(pattern)
     indices = []
@@ -14,14 +14,14 @@ def start_indices(text: str, pattern: str) -> List[int]:
         return indices
 
 
-assert start_indices("abc", "bc") == [1]
-assert start_indices("ababa", "aba") == [0, 2]
-assert start_indices("aaaa", "aa") == [0, 1, 2]
+assert find_indices("abc", "bc") == [1]
+assert find_indices("ababa", "aba") == [0, 2]
+assert find_indices("aaaa", "aa") == [0, 1, 2]
 
 
-assert start_indices("a", "ab") == []
-assert start_indices("abc", "ac") == []
+assert find_indices("a", "ab") == []
+assert find_indices("abc", "ac") == []
 
 # Acceptance case
-assert start_indices('abracadabra', 'abr') == [0, 7]
-assert start_indices('GeeksforGeeks', 'Geeks') == [0, 8]
+assert find_indices('abracadabra', 'abr') == [0, 7]
+assert find_indices('GeeksforGeeks', 'Geeks') == [0, 8]
